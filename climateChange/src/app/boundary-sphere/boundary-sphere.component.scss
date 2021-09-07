@@ -1,0 +1,76 @@
+// .circle {
+//   height: 500px;
+//   width: 500px;
+//   background-color: #555;
+//   border-radius: 50%;
+// }
+.pie {
+  overflow: hidden;
+  position: relative;
+  margin: 1em auto;
+  border: dashed 1px;
+  padding: 0;
+  width: 32em;
+  height: 32em;
+  border-radius: 50%;
+  list-style: none;
+}
+.slice {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+.slice:first-child {
+  transform: rotate(0deg) skewY(-40deg);
+}
+.slice:nth-child(2) {
+  transform: rotate(40deg) skewY(-40deg);
+}
+.slice:nth-child(3) {
+  transform: rotate(80deg) skewY(-40deg);
+}
+.slice:nth-child(4) {
+  transform: rotate(120deg) skewY(-40deg);
+}
+.slice:nth-child(5) {
+  transform: rotate(160deg) skewY(-40deg);
+}
+.slice:nth-child(6) {
+  transform: rotate(200deg) skewY(-40deg);
+}
+.slice:nth-child(7) {
+  transform: rotate(240deg) skewY(-40deg);
+}
+.slice:nth-child(8) {
+  transform: rotate(280deg) skewY(-40deg);
+}
+.slice:nth-child(9) {
+  transform: rotate(320deg) skewY(-50deg);
+}
+
+.slice-contents:first-child {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background: lightblue;
+}
+.slice-contents:nth-child(9) {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background: rgb(60, 108, 124);
+}
+.slice:first-child .slice-contents {
+  transform: skewY(22.5deg); /* unskew slice contents */
+}
+.slice:hover .slice-contents {
+  background: violet;
+} /* highlight on hover */
